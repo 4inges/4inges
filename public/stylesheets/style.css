@@ -1,0 +1,221 @@
+/*BODY*/
+body{
+    background-color: rgb(135, 217, 245);
+    height:100vh ;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.logo, .logo2{
+    width: 5.5vw;
+    height: 5vh;
+    background: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+/* NOSOTROS */
+.nosotros{
+    background-image: url("../images/y.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:80vh;
+    width:100vw;
+}
+.contenido{
+    color:rgb(255, 251, 251);
+    background-color:rgba(0, 0, 0, 0.19);
+    text-align: center;
+    text-shadow: 3px 2px black;
+    margin-bottom: 30vh;
+}
+
+/*Agenda*/
+.padreagenda{
+    height:35vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agenda{
+    background-image:url("../images/");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:50vw;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contenidoagenda{
+    color:rgb(255, 251, 251);
+    background-color:rgba(0, 0, 0, 0.472);
+    text-align: center;
+    text-shadow: 3px 2px black;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+/*boton*/
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #aeaeae;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+
+/* UBICACIONES */
+.ubi{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 55% 40%;
+    margin-left: 15px;
+}
+
+    /* MAPA */
+    /* #map{
+        display: inline-block;
+    } */
+
+    /* INFO UBICACIONES */
+    /* .ubi_info{
+        display: inline-block;
+        width: 40vw;
+    } */
+
+    .card {
+        width: 40vw;
+        height: 103px;
+        margin-left: 20px;
+        background-color: #d8d8d8;
+        box-shadow: 15px 15px 30px #e2e2e2, -15px -15px 30px #ffffff;
+        transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s, transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    }
+
+    .card:hover {
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        transform: scale(1.05);
+    }
+
+/*servicios*/   
+.lavado, .aspirado, .faros{
+    width:30vw;
+    height:30vh;
+}
+.lavado{
+    background-image: url("../images/serv_LavExt.png");
+}
+.aspirado{
+    background-image: url("../images/serv_aspInt.png");
+}
+.faros{
+    background-image: url("../images/serv_faros.png");
+}
+
+/* FOOTER */
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(177, 184, 189);
+} 
+
+.logo2{
+    width: 7vw;
+    height: 6vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+.copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  color: black;
+}
