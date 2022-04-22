@@ -8,8 +8,8 @@ body{
 
 /* NAVBAR */
 .logo, .logo2{
-    width: 5.5vw;
-    height: 5vh;
+    width: 6vw;
+    height: 6vh;
     background: url('../images/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body{
 
 /*Agenda*/
 .padreagenda{
-    height:35vh;
+    height:20vh;
     width:100vw;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ body{
     background-position: center;
     width:50vw;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .contenidoagenda{
@@ -184,20 +184,46 @@ button {
     }
 
 /*servicios*/   
+.servicios{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 33%,33% ,33%;
+}
 .lavado, .aspirado, .faros{
     width:30vw;
     height:30vh;
+    
 }
 .lavado{
     background-image: url("../images/serv_LavExt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .aspirado{
+
     background-image: url("../images/serv_aspInt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .faros{
-    background-image: url("../images/serv_faros.png");
-}
 
+    background-image: url("../images/serv_faros.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*info servicios*/
+.infla, .infas,.infar{
+    width: 100%;
+    height: 5vh;
+    background-color: #00000162;
+    color: white;
+    text-align: center;
+}
 /* FOOTER */
 footer{
     display: grid;
