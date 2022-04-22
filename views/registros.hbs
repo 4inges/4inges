@@ -1,31 +1,99 @@
 {{>navbar}}
+<center>
+<h1>.:: AGENDAR CITAS ::.</h1>
+</center>
 
-<h1>.:: Agendar Citas ::.</h1>
+<div class="form_Ag">
+  <form>
+    <fieldset>
+      <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Tipo de coche</label>
+        <select class="form-select" id="exampleSelect1" required>
+          <option selected disabled value="">.:: Seleccione un tipo de coche ::.</option>
+          <option>Compacto</option>
+          <option>Taxi/uber</option>
+          <option>Camioneta</option>
+          <option>Sedán</option>
+        </select>
+      </div>
 
-<form>
-  <fieldset>
-    <div class="form-group">
-      <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
     <fieldset class="form-group">
-      <legend class="mt-4">Checkboxes</legend>
+      <legend class="mt-4">Tipo de Servicio</legend>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
+          Lavado Exterior
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-        <label class="form-check-label" for="flexCheckChecked">
-          Checked checkbox
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Aspirado de Interiores
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Limpieza de Faros
         </label>
       </div>
     </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+
+
+
+    <div class="form-group">
+      <label for="exampleSelect1" class="form-label mt-4">Sucursal</label>
+      <select class="form-select" id="exampleSelect1" required>
+        <option disabled selected value="">.:: Seleccione una Sucursal ::.</option>
+        <option>Río Verde</option>
+        <option>Diagonal Reforma</option>
+        <option>Enrique Anzuela</option>
+        <option>Av. Coahuila</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleSelect1" class="form-label mt-4">Fecha de Cita</label>
+      <br>
+      <input type="date" class="form-control" id="fechaAg" aria-describedby="emailHelp" required>
+
+    </div>
+     	
+      
+    <div class="form-group">
+      <label for="exampleSelect1" class="form-label mt-4">Horario</label>
+      <select class="form-select" id="exampleSelect1" required>
+        <option selected disabled value="">.:: Seleccione un horario::.</option>
+        <option>10:00 - 11:00 a.m</option>
+        <option>11:00 - 12:00 a.m</option>
+        <option>12:00 - 1:00 p.m</option>
+        <option>1:00 - 2:00 p.m</option>
+        <option>2:00 - 3:00 p.m</option>
+        <option>3:00 - 4:00 p.m</option>
+        <option>5:00 - 6:00 p.m</option>
+      </select>
+    </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="form-label mt-4">Nombre completo del cliente</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="form-label mt-4">Télefono de contacto</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Teléfono" required>
+      </div>
+
+      <br>
+      <center>
+        <button type="submit" class="btn btn-primary">AGENDAR</button>
+      </center>
+    </fieldset>
+  </form>
+</div>
+
+<script src="./javascripts/reg.js"></script>
+
+<br>
 
 {{>footer}}

@@ -18,5 +18,8 @@ router.get('/registros', function(req, res, next) {
   res.render('registros', { title: 'AGENDAR CITA' });
 });
 
+router.get('/logAdmin', function(req, res, next) {
+  res.render('logAdmin', { title: 'LOGIN DUEÑO' });
+});
 
 module.exports = router;

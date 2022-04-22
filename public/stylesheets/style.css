@@ -15,6 +15,7 @@ body{
     background-repeat: no-repeat;
     margin-left: 5px;
 }
+
 /* NOSOTROS */
 .nosotros{
     background-image: url("../images/y.jpeg");
@@ -23,13 +24,14 @@ body{
     background-position: center;
     height:80vh;
     width:100vw;
+    margin-bottom: 2vh;
 }
 .contenido{
     color:rgb(255, 251, 251);
     background-color:rgba(0, 0, 0, 0.19);
     text-align: center;
     text-shadow: 3px 2px black;
-    margin-bottom: 30vh;
+    margin-bottom: 10vh;
 }
 
 /*Agenda*/
@@ -178,52 +180,83 @@ button {
     }
 
     .card:hover {
-        border-bottom-right-radius: 50px;
-        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
         transform: scale(1.05);
     }
 
-/*servicios*/   
+/* SERVICIOS */   
 .servicios{
     height: 100%;
     width: 100%;
     background-color: black;
     display: grid;
-    grid-template-rows: 33%,33% ,33%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "a a b b"
+    "c d d e";
+    gap: 10px;
+    padding: 10px;
 }
+
 .lavado, .aspirado, .faros{
-    width:30vw;
-    height:30vh;
-    
+    border-radius: 10%;
 }
+
 .lavado{
     background-image: url("../images/serv_LavExt.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-area: a;
 }
-.aspirado{
 
+.aspirado{
+    grid-area: b;
     background-image: url("../images/serv_aspInt.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.faros{
 
+.faros{
+    grid-area: d;
     background-image: url("../images/serv_faros.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /*info servicios*/
 .infla, .infas,.infar{
     width: 100%;
-    height: 5vh;
+    height: 8vh;
     background-color: #00000162;
     color: white;
     text-align: center;
 }
+
+/* FORM AGENDAR CITA */
+.form_Ag{
+    border: solid black 3px;
+    width: 50vw;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 25%;
+    background-color: rgba(135, 207, 235, 0.557);
+}
+/*Form Log*/
+.padrelog{
+    border: solid black 3px;
+    width: 50vw;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 25%;
+    background-color: rgba(135, 207, 235, 0.557);
+    margin-bottom: 15%;
+}
+
 /* FOOTER */
 footer{
     display: grid;
