@@ -1,13 +1,15 @@
+
 let btnEntrar = document.getElementById('btnAdmin')
 let username = document.getElementById('username')
 let pwd = document.getElementById('pwd')
 
-let agenda = require('./reg.js')
+console.log(agenda)
 
 btnEntrar.addEventListener('click', ()=>{
     if(username.value == 'admin'){
         if(pwd.value == 'admin'){
             alert('Bienvenido admin')
+            console.log(agenda)
         }else{
             alert('contraseña incorrectos')
             username.value = ''
