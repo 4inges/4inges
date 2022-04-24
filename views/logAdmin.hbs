@@ -1,9 +1,10 @@
 {{>navbar}}
 
+<br>
+<div class="padrelog" id="formEnter" style="display:block">
 <center>
     <h1>.:: LOGIN ::.</h1>
 </center>
-<div class="padrelog">
 <form>
     <div class="form-group">
       <label for="username" class="form-label mt-4">Nombre de usuario</label>
@@ -20,6 +21,49 @@
 </form>
 </div>
 
+<div class="padrelog2" id="tablaCitas" style="display:none">
+  <center>
+    <h1>.:: CITAS ::.</h1>
+  </center>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Horario</th>
+        <th scope="col">Sucursal</th>
+        <th scope="col">Nombre del Cliente</th>
+        <th scope="col">Tel. del Cliente</th>
+        <th scope="col">Tipo de Coche</th>
+        <th scope="col">Servicios</th>
+        <th scope="col">Cantidad a pagar</th>
+        <th scope="col">Trabajo Completado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each citas}}
+        <tr class="table-secondary">
+          <td>{{this.fecha}}</td>
+          <td>{{this.horario}}</td>
+          <td>{{this.sucursal}}</td>
+          <td>{{this.nomCli}}</td>
+          <td>{{this.telCli}}</td>
+          <td>{{this.coche}}</td>
+          <td id="serv">
+            {{#each servicios}}
+                {{this}},
+            {{/each}}
+          </td>
+          <td>${{this.cuenta}}</td>
+          <td>
+            <a href="/admin/{{this._id}}">
+              <button type="button" class="btn btn-outline-success">Eliminar</button>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 
 <script src="./javascripts/admin.js"></script>
 

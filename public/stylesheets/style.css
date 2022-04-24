@@ -247,8 +247,9 @@ button {
     /* background-color: rgb(250, 128, 114); */
     background: radial-gradient( rgb(121, 228, 222) 25%, skyblue  50%)
 }
+
 /*Form Log*/
-.padrelog{
+.padrelog, .padrelog2{
     border: solid black 3px;
     width: 50vw;
     padding: 20px;
@@ -256,6 +257,14 @@ button {
     margin-left: 25%;
     background-color: rgba(135, 207, 235, 0.557);
     margin-bottom: 4.5%;
+    
+}
+
+.padrelog2{
+    width: 95vw;
+    margin-left: 2.5%;
+    text-align: center;
+    padding-bottom: 25vh;
 }
 
 /* FOOTER */
