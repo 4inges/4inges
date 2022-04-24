@@ -76,10 +76,22 @@
 
       <div class="form-group">
         <label for="telCli" class="form-label mt-4">Télefono de contacto</label>
-        <input type="text" class="form-control" name="telCli" aria-describedby="emailHelp" placeholder="Teléfono" required>
+        <input type="number" min="10" max="10" class="form-control" name="telCli" aria-describedby="emailHelp" placeholder="Teléfono" required>
       </div>
 
       <br>
+      <div class="form-group">
+        <label for="nomCli" class="form-label mt-4">Métodos de pago:</label>
+         <br>
+        <a href="https://www.paypal.com/us/home">
+        <button type="button" class="btn btn-outline-primary">Pay Pal</button>
+        </a>
+
+        <a  href="https://www.mercadopago.com.mx/">
+        <button type="button" class="btn btn-outline-warning">Mercado pago</button>
+        </a>  
+        </div>      
+        <br>
       <center>
         <button class="btn btn-primary" type="submit" id="btnAgendar">AGENDAR</button>
       </center>
