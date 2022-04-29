@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var {client, dbName} = require('../db/mongo');
 
+var c = 0
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'INICIO' });
@@ -21,16 +23,20 @@ router.get('/registros', function(req, res, next) {
 
 router.post('/agregar', function(req, res, next) {
   agregarCita(req.body)
-    .then(()=>{
-        console.log('Cita Agregada!')
-        res.redirect('/')
-      })
-      .catch((err)=>{
-          console.log(err);
-      })
-      .finally(()=>{
-          client.close();
-      })
+  .then(()=>{
+    let x = req.body
+    let hora = x.horario
+    let fec = new Date(x.fechaAg).toDateString()
+    console.log('Cita Agregada!')
+    res.redirect(`/?hora=${hora}&fecha=${fec}&total=${c}`)
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+  .finally(()=>{
+    c = 0
+    client.close();
+  })
 });
 
 router.get('/logAdmin', async function(req, res, next) {
@@ -73,6 +79,8 @@ async function agregarCita(datos){
     servicios.push('limpFaros')
   }
 
+  let fechaX = new Date(datos.fechaAg).toDateString()
+
   await client.connect();
   const db = client.db(dbName);
   const collection = db.collection('citas');
@@ -80,12 +88,14 @@ async function agregarCita(datos){
       coche: datos.tipoCoche,
       servicios: servicios,
       sucursal: datos.sucursal,
-      fecha: datos.fechaAg,
+      fecha: fechaX,
       horario: datos.horario,
       nomCli: datos.nomCli,
       telCli: datos.telCli, 
       cuenta: cuenta
   });
+
+  c = cuenta
 }
 
 module.exports = router;
